@@ -1,0 +1,89 @@
+/* StickyNav.css */
+.sticky-nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+    z-index: 1000;
+  }
+  
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav-toggle {
+    display: none;
+    font-size: 24px;
+    color: goldenrod;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 0 10px;
+  }
+  
+  .nav-menu li a {
+    display: block;
+    color: goldenrod;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: #d09b1e;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+    
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .nav-menu.open {
+      display: flex;
+    }
+    
+    .nav-menu ul {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .nav-menu li {
+      width: 100%;
+    }
+    
+    .nav-menu li a {
+      padding: 10px;
+      text-align: left;
+    }
+  }
+  

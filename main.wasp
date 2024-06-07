@@ -1,0 +1,31 @@
+app dbaWasp {
+  wasp: {
+    version: "^0.13.2"
+  },
+  title: "Dancing Bees Apothecary",
+  client: {
+    rootComponent: import Wrapper from "@src/Wrapper.tsx"
+  }
+
+}
+
+route RootRoute { path: "/", to: MainPage }
+route BioRoute { path: "/bio", to: BioPage }
+route ContactRoute { path: "/contact", to: ContactPage }
+route MissionRoute { path: "/mission", to: MissionPage }
+route AboutRoute { path: "/about", to: AboutPage }
+page MainPage {
+  component: import { MainPage } from "@src/MainPage"
+}
+page BioPage {
+  component: import { BioPage } from "@src/BioPage"
+}
+page ContactPage {
+  component: import { ContactPage } from "@src/ContactPage"
+}
+page MissionPage {
+  component: import { MissionPage } from "@src/MissionPage"
+}
+page AboutPage {
+  component: import { AboutPage } from "@src/AboutPage"
+}
